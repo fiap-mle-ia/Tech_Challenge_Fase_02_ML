@@ -56,6 +56,8 @@ terminou em compra. Só **1.908 sessões (15,5%)** compraram, então as classes 
 | 4c. Entrega | README final, Model Card e vídeo STAR | Todos |
 
 Cada integrante abre um PR a partir de uma branch própria, com os testes do seu módulo.
+A contribuição de cada um aparece no histórico de commits e no gráfico de
+[contribuidores](https://github.com/fiap-mle-ia/Tech_Challenge_Fase_02_ML/graphs/contributors) do GitHub.
 
 ## Integrantes
 
