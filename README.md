@@ -35,10 +35,13 @@ Pré-requisitos: Python 3.14 e [Poetry 2.x](https://python-poetry.org/docs/#inst
 git clone https://github.com/fiap-mle-ia/Tech_Challenge_Fase_02_ML.git
 cd Tech_Challenge_Fase_02_ML
 cp .env.example .env
-poetry install
+poetry install            # produção + desenvolvimento, nas versões do poetry.lock
 poetry run pytest
 poetry run ruff check .
 ```
+
+Para instalar só as dependências de produção (como numa imagem Docker), use
+`poetry install --only main`. As variáveis aceitas estão descritas no `.env.example`.
 
 ## Estrutura
 
