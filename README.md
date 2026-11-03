@@ -5,9 +5,9 @@ comportamento de navegação em uma loja online. O foco do desafio é a **Engenh
 código limpo, ambiente reproduzível com Poetry, dados versionados com DVC, experimentos
 rastreados no MLflow e execução em Docker.
 
-Projeto do **Grupo 28** da pós-graduação em Machine Learning Engineering da POSTECH (FIAP).
+Projeto do **Grupo 08** da pós-graduação em Machine Learning Engineering da POSTECH (FIAP).
 
-> 🚧 **Em construção.** A Etapa 1 está montada. As próximas etapas entram em PRs separados.
+> 🚧 **Em construção.** As Etapas 1 e 2 estão montadas. As Etapas 3 e 4 entram nos próximos PRs.
 
 ## Dataset
 
@@ -26,6 +26,23 @@ terminou em compra. Só **1.908 sessões (15,5%)** compraram, então as classes 
 | **Docker** | Execução do pipeline em contêiner |
 | pytest + ruff | Testes e lint (rodam no GitHub Actions a cada PR) |
 
+## Como rodar
+
+Pré-requisitos: Python 3.14 e [Poetry 2.x](https://python-poetry.org/docs/#installation)
+(por exemplo, `pipx install poetry`).
+
+```bash
+git clone https://github.com/fiap-mle-ia/Tech_Challenge_Fase_02_ML.git
+cd Tech_Challenge_Fase_02_ML
+cp .env.example .env
+poetry install            # produção + desenvolvimento, nas versões do poetry.lock
+poetry run pytest
+poetry run ruff check .
+```
+
+Para instalar só as dependências de produção (como numa imagem Docker), use
+`poetry install --only main`. As variáveis aceitas estão descritas no `.env.example`.
+
 ## Estrutura
 
 ```
@@ -34,6 +51,7 @@ terminou em compra. Só **1.908 sessões (15,5%)** compraram, então as classes 
 ├── models/                    # saídas do pipeline (DVC)
 ├── src/propensao_compra/
 │   ├── settings.py            # variáveis do .env e leitura do params.yaml
+│   ├── logging_setup.py       # logging único, com o nível vindo do LOG_LEVEL
 │   ├── data/                  # ingestão e pré-processamento
 │   ├── modeling/              # pipeline do scikit-learn, treino e avaliação
 │   └── tracking/              # MLflow: tracking e Model Registry

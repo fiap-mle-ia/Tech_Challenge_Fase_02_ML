@@ -1,0 +1,20 @@
+# Parâmetros do pipeline. O DVC lê este arquivo (seção params do dvc.yaml) e
+# reexecuta só os estágios cujos parâmetros mudaram.
+
+seed: 42
+
+data:
+  # Online Shoppers Purchasing Intention (UCI, id 468): 12.330 sessões, 18 colunas
+  source_url: https://archive.ics.uci.edu/static/public/468/online+shoppers+purchasing+intention+dataset.zip
+  csv_name: online_shoppers_intention.csv
+  sha256: b3055ee355f59134d851d32641183cb4a8b45def7124d2f50442a042f358e0d9
+  raw_path: data/raw/online_shoppers_intention.csv
+  target: Revenue
+
+split:
+  test_size: 0.2
+  stratify: true
+
+train:
+  cv_folds: 5
+  # Os hiperparâmetros dos modelos entram aqui na Etapa 4

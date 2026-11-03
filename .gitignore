@@ -19,13 +19,20 @@ __pycache__/
 .coverage
 htmlcov/
 
-# Dados e modelos ficam no DVC, não no Git (o DVC cria .gitignore próprios nas pastas)
+# Dados e modelos ficam no DVC, não no Git. Os ponteiros do DVC (*.dvc) e os
+# .gitignore que ele cria nas pastas precisam continuar visíveis para o Git.
 /data/raw/*
 /data/processed/*
 /models/*
 !/data/raw/.gitkeep
 !/data/processed/.gitkeep
 !/models/.gitkeep
+!/data/raw/*.dvc
+!/data/processed/*.dvc
+!/models/*.dvc
+!/data/raw/.gitignore
+!/data/processed/.gitignore
+!/models/.gitignore
 
 # MLflow local (banco do tracking/Registry e artefatos das runs)
 mlflow.db
