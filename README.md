@@ -5,7 +5,7 @@ comportamento de navegação em uma loja online. O foco do desafio é a **Engenh
 código limpo, ambiente reproduzível com Poetry, dados versionados com DVC, experimentos
 rastreados no MLflow e execução em Docker.
 
-Projeto do **Grupo 28** da pós-graduação em Machine Learning Engineering da POSTECH (FIAP).
+Projeto do **Grupo 08** da pós-graduação em Machine Learning Engineering da POSTECH (FIAP).
 
 > 🚧 **Em construção.** As Etapas 1 e 2 estão montadas. As Etapas 3 e 4 entram nos próximos PRs.
 
