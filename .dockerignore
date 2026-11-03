@@ -1,0 +1,13 @@
+# Ignora tudo e libera só o que a imagem precisa (o .env nunca entra na imagem).
+# Revisar junto com o Dockerfile na Etapa 3.
+*
+!pyproject.toml
+!poetry.lock
+!poetry.toml
+!README.md
+!src/
+!configs/
+!dvc.yaml
+!dvc.lock
+!.dvc/config
+**/__pycache__/
