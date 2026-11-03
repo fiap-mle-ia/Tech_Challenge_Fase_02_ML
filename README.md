@@ -7,7 +7,7 @@ rastreados no MLflow e execução em Docker.
 
 Projeto do **Grupo 28** da pós-graduação em Machine Learning Engineering da POSTECH (FIAP).
 
-> 🚧 **Em construção.** A Etapa 1 está montada. As próximas etapas entram em PRs separados.
+> 🚧 **Em construção.** As Etapas 1 e 2 estão montadas. As Etapas 3 e 4 entram nos próximos PRs.
 
 ## Dataset
 
@@ -25,6 +25,20 @@ terminou em compra. Só **1.908 sessões (15,5%)** compraram, então as classes 
 | **DVC** | Versionamento do dataset e pipeline reprodutível (`dvc.yaml`) |
 | **Docker** | Execução do pipeline em contêiner |
 | pytest + ruff | Testes e lint (rodam no GitHub Actions a cada PR) |
+
+## Como rodar
+
+Pré-requisitos: Python 3.14 e [Poetry 2.x](https://python-poetry.org/docs/#installation)
+(por exemplo, `pipx install poetry`).
+
+```bash
+git clone https://github.com/fiap-mle-ia/Tech_Challenge_Fase_02_ML.git
+cd Tech_Challenge_Fase_02_ML
+cp .env.example .env
+poetry install
+poetry run pytest
+poetry run ruff check .
+```
 
 ## Estrutura
 
