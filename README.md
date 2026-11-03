@@ -48,6 +48,7 @@ poetry run ruff check .
 ├── models/                    # saídas do pipeline (DVC)
 ├── src/propensao_compra/
 │   ├── settings.py            # variáveis do .env e leitura do params.yaml
+│   ├── logging_setup.py       # logging único, com o nível vindo do LOG_LEVEL
 │   ├── data/                  # ingestão e pré-processamento
 │   ├── modeling/              # pipeline do scikit-learn, treino e avaliação
 │   └── tracking/              # MLflow: tracking e Model Registry
