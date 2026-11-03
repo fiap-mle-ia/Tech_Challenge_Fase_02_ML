@@ -18,6 +18,9 @@ jobs:
       - name: Instala o Poetry
         run: pipx install poetry==2.5.1
 
+      - name: Confere se o poetry.lock está sincronizado com o pyproject.toml
+        run: poetry check --lock
+
       - name: Instala as dependências pelo poetry.lock
         run: poetry install --no-interaction
 
