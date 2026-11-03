@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Ambiente / SO / IDE (só o .env.example vai para o repositório)
+.env
+.DS_Store
+.vscode/
+.idea/
+
+# Testes / cobertura
+.coverage
+htmlcov/
+
+# Dados e modelos ficam no DVC, não no Git (o DVC cria .gitignore próprios nas pastas)
+/data/raw/*
+/data/processed/*
+/models/*
+!/data/raw/.gitkeep
+!/data/processed/.gitkeep
+!/models/.gitkeep
+
+# MLflow local (banco do tracking/Registry e artefatos das runs)
+mlflow.db
+mlruns/
+mlartifacts/
+
+# Build e ferramentas
+build/
+dist/
+*.log
+
+# Vídeos e materiais de entrega não vão para o repositório
+*.mp4
+*.mov
+*.mp3
